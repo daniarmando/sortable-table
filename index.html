@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Reordenar tabela com jQuery Sortable</title>  
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="vendor/fontawesome-free-5.12.1-web/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">  
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-header">            
+      <div class="title-users">
+        Pessoas
+        <button type="button" class="btn btn-sort-users" id="btnSort" data-toggle="tooltip" data-placement="top" title="Reordenar">
+          <i class="fas fa-sort"></i>
+        </button> 
+      </div>
+            
+      <div class="ordering-menu">
+        Clique e arraste os itens tracejados para reordená-los<br />              
+        <form id="formReorderUsers" class="form">                 
+          <input type="hidden" name="idUsers" id="inputHiddenIdUsers" />                                          
+          <button type="button" class="mt-3 ml-2 btn btn-success btn-sm align-center btn-save" id="btnSaveSort" disabled>
+            <i class="fas fa-check"></i> Salvar
+          </button>
+          <button type="button" class="mt-3 ml-2 btn btn-danger btn-sm align-center" id="btnCancelSort">
+              <i class="fas fa-times"></i> Cancelar
+          </button>                                         
+        </form>
+      </div>  
+    </div>
+    <div class="card-body p-1">
+      <table class="table table-hover table-striped mov table-users">
+        <tbody id="sortable">                
+          <tr>                    
+            <td>
+              1  
+            </td>
+            <td>                    
+              <img src="img/user_1.png" alt="User 1" />                    
+            </td>                 
+            <td align="center">Johnathan E. Katz</td>                   
+          </tr>                                          
+          <tr>                    
+            <td>
+              2 
+            </td>
+            <td>                    
+              <img src="img/user_2.png" alt="User 2" />                    
+            </td>                 
+            <td align="center">Aaron L. Sanchez</td>                   
+          </tr>  
+          <tr>                    
+            <td>
+              3 
+            </td>
+            <td>                    
+              <img src="img/user_3.png" alt="User 3" />                    
+            </td>                 
+            <td align="center">Andrew A. Larson</td>                   
+          </tr>  
+          <tr>                    
+            <td>
+              4
+            </td>
+            <td>                    
+              <img src="img/user_4.png" alt="User 4" />                    
+            </td>                 
+            <td align="center">Miguel A. Jones</td>                   
+          </tr>  
+
+          <tr>                    
+            <td>
+              5  
+            </td>
+            <td>                    
+              <img src="img/user_5.png" alt="User 5" />                    
+            </td>                 
+            <td align="center">Michael S. Stephens</td>                   
+          </tr>  
+          <tr>                    
+            <td>
+              6 
+            </td>
+            <td>                    
+              <img src="img/user_6.png" alt="User 6" />                    
+            </td>                 
+            <td align="center">Cynthia D. Harris</td>                   
+          </tr>  
+        </tbody>               
+      </table>   
+      <div class="ordering-menu-reset">
+          <hr>
+          <form class="form">                        
+            <input type="checkbox" name="isReturnToOriginalOrder" id="isReturnToOriginalOrder" class="hidden-checkbox" checked disbled />                                                   
+            <button type="button" class="btn btn-warning" id="btnResetOriginalOrder">
+              <i class="fas fa-undo-alt"></i> Resetar                 
+            </button>                                           
+          </form>
+        </div>                                 
+    </div>
+  </div>    
+
+<script src="vendor/jquery-1.11.2.min.js"></script>
+<script src="vendor/jquery-ui-1.12.1/custom/sortable/jquery-ui.min.js"></script>
+<script src="vendor/jqueryui-touch-punch-0.2.2/jquery.ui.touch-punch-0.2.3.min.js"></script>
+<script src="js/sort.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+</body>
+</html>

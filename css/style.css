@@ -1,0 +1,49 @@
+.table-users tbody tr td img {
+    max-width: 50px;
+  }
+
+.sortable-table tbody {
+  cursor: move;
+}
+
+.sortable-table tbody tr {
+  border: 2px dashed #A9A9A9;       
+}
+
+.sortable-table tbody tr:hover,
+.sortable-table tbody tr:focus {
+  border-left: 3px dashed #007BFF;  
+  border-right: 3px dashed #007BFF;   
+  background-color: #CED4DA;  
+}
+
+.ordering-menu,
+.ordering-menu-reset {
+  text-align: center;
+  height: auto;
+  max-height: 0;    
+  opacity: 0;   
+  position: relative;   
+  left: -999px;
+  transition: left .3s, opacity .3s, max-height .5s;    
+}   
+
+.form {
+  text-align: center;
+}   
+
+.hidden-checkbox {
+  display: none;
+}
+
+.btn-sort-users {
+  background-color: transparent;
+}
+
+.btn-save:disabled {
+  cursor: not-allowed;
+}
+
+.ordering-menu-reset {  
+  margin-bottom: 15px;
+}
